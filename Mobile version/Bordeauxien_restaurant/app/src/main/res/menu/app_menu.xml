@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:theme="@style/PopupMenuListView">
+
+    <item  android:id="@+id/menu_option"
+        android:title=""
+        android:icon="@drawable/ic_menu_option"
+        app:showAsAction="always">
+        <menu>
+            <group android:id="@+id/group1">
+            <item android:id="@+id/notification"
+                android:title="Notification"
+                android:icon="@drawable/ic_notification"
+
+                app:showAsAction="never" />
+            </group>
+
+            <group android:id="@+id/group2">
+            <item android:id="@+id/search"
+                android:title="Search"
+                android:icon="@drawable/ic_search"
+                app:showAsAction="never" />
+            </group>
+
+            <group android:id="@+id/group3">
+            <item android:id="@+id/rate"
+                android:title="Rate now"
+                android:icon="@drawable/ic_rate"
+                app:showAsAction="never" />
+            </group>
+
+            <group android:id="@+id/group4">
+            <item android:id="@+id/share"
+                android:title="Share now"
+                android:icon="@drawable/ic_share"
+                app:showAsAction="never" />
+            </group>
+        </menu>
+
+    </item>
+
+
+</menu>

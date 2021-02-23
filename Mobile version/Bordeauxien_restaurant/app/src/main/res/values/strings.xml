@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name"></string>
+    <string name="bordeauxien">Bordeauxien</string>
+    <string name="about">About Us</string>
+    <string name="website">Website</string>
+    <string name="call">Call</string>
+    <string name="inquire">Inquire</string>
+    <string name="contact">Contact</string>
+</resources>
