@@ -1,1 +1,0 @@
-# Mobile-Term-Project
