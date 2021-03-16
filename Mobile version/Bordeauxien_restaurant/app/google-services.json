@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "37370739226",
+    "project_id": "bordeauxien-restaurant",
+    "storage_bucket": "bordeauxien-restaurant.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:37370739226:android:4f4e9642441272c2906fa3",
+        "android_client_info": {
+          "package_name": "com.example.bordeauxien_restaurant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "37370739226-4637ek7qttv0cnhtbi2qef3poimsu0dj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4TDL7wA8Tv3mDEd75k4ndjhbTVBSMyx4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "37370739226-4637ek7qttv0cnhtbi2qef3poimsu0dj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

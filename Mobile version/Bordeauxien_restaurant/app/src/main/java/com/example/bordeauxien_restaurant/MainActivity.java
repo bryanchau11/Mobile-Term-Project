@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -92,4 +93,30 @@ public class MainActivity extends AppCompatActivity {
         inflater.inflate(R.menu.app_menu , menu);
         return true;
     }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch (item.getItemId()){
+            case R.id.notification:
+
+                return true;
+            case R.id.search:
+                return true;
+            case R.id.rate:
+                startActivity(new Intent(getApplicationContext(), feedback.class));
+                break;
+            case R.id.share:
+                Intent myIntent = new Intent(Intent.ACTION_SEND);
+                myIntent.setType("text/plain");
+                String shareBody = "Bordeauxien Restaurant";
+                String shareSub = "Share Us";
+                myIntent.putExtra(Intent.EXTRA_SUBJECT, shareSub);
+                myIntent.putExtra(Intent.EXTRA_TEXT,shareBody);
+                startActivity(Intent.createChooser(myIntent,"Share Using"));
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+
+
 }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.bordeauxien_restaurant">
 
     <application
@@ -9,18 +10,35 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Bordeauxien_restaurant">
-        <activity android:name=".contact" android:parentActivityName=".MainActivity"></activity>
-        <activity android:name=".inquire" android:parentActivityName=".MainActivity"/>
-        <activity android:name=".call" android:parentActivityName=".MainActivity"/>
-        <activity android:name=".website" android:parentActivityName=".MainActivity" />
-        <activity android:name=".about" android:parentActivityName=".MainActivity"/>
-        <activity android:name=".MainActivity" >
+        <activity android:name=".feedback"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".contact"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".inquire"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".call"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".website"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".about"
+            android:parentActivityName=".MainActivity" />
+
+        <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"  />
+                <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
