@@ -94,7 +94,7 @@ public class feedback extends AppCompatActivity {
             case R.id.notification:
 
                 return true;
-            case R.id.search:
+            case R.id.logout:
                 return true;
             case R.id.rate:
                 startActivity(new Intent(getApplicationContext(), feedback.class));

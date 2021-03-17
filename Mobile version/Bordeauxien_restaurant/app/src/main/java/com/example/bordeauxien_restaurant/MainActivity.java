@@ -14,6 +14,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.widget.Toolbar;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 
 public class MainActivity extends AppCompatActivity {
     private Button button_about, button_website, button_call, button_inquire, button_contact;
@@ -36,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         button_website.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              openActivity_website();
+              openActivity_login();
             }
         });
         button_call = (Button) findViewById(R.id.call_button);
@@ -69,8 +71,8 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this,  about.class );
         startActivity(intent);
     }
-    public void openActivity_website(){
-        Intent intent = new Intent(this,  website.class );
+    public void openActivity_login(){
+        Intent intent = new Intent(this,  Login.class );
         startActivity(intent);
     }
     public void openActivity_call(){
@@ -99,8 +101,11 @@ public class MainActivity extends AppCompatActivity {
             case R.id.notification:
 
                 return true;
-            case R.id.search:
-                return true;
+            case R.id.logout:
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(getApplicationContext(), Register.class));
+                finish();
+                break;
             case R.id.rate:
                 startActivity(new Intent(getApplicationContext(), feedback.class));
                 break;

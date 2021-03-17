@@ -10,8 +10,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Bordeauxien_restaurant">
-        <activity android:name=".feedback"
-            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".Login"></activity>
+        <activity android:name=".Register" />
+        <activity
+            android:name=".feedback"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".contact"
             android:parentActivityName=".MainActivity" />
@@ -27,7 +30,6 @@
         <activity
             android:name=".about"
             android:parentActivityName=".MainActivity" />
-
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
