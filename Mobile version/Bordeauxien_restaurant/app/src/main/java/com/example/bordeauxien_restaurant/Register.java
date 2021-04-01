@@ -31,14 +31,14 @@ public class Register extends AppCompatActivity {
     TextView mLoginButton;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
-  //  TextView userName, userEmail;
+    //  TextView userName, userEmail;
     String userID;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         // userEmail = (TextView) findViewById(R.id.userEmail);
-      //  userName = (TextView) findViewById(R.id.userName);
+        //  userName = (TextView) findViewById(R.id.userName);
         mFullName = findViewById(R.id.fullName);
         mEmail = findViewById(R.id.Email);
         mPassword = findViewById(R.id.Password);
@@ -53,7 +53,7 @@ public class Register extends AppCompatActivity {
 
         if (fAuth.getCurrentUser() != null) {
 
-            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            startActivity(new Intent(getApplicationContext(), MainActivity2.class));
 
             finish();
         }
@@ -108,7 +108,7 @@ public class Register extends AppCompatActivity {
 
                                 }
                             });
-                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                            startActivity(new Intent(getApplicationContext(), MainActivity2.class));
 
                         } else {
                             Toast.makeText(Register.this, "Error ! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();

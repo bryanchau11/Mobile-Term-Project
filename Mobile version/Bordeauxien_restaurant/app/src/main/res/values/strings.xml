@@ -6,4 +6,24 @@
     <string name="call">Call</string>
     <string name="inquire">Inquire</string>
     <string name="contact">Contact</string>
+    <string name="pinotnoir">These 100% Pinot Noir grapes are meticulously hand-sorted. Each lot is fermented in small batches with up to 20% whole cluster inclusion. Stainless steel fermentation with daily punch downs and pump overs is followed by malolactic fermentation.</string>
+
+
+    <string name="redblend">For optimum flavor and body, this wine underwent delestage, with extended maceration before being aged in 25% new French oak. The varietals blended for the 2017 NEXT Red Blend are 40% Syrah, 40% Merlot, 20% Cabernet Sauvignon. </string>
+
+
+    <string name="cabernetfranc">Cold soaked for 48 hours with daily pump overs. Fermented in a stainless steel open top tank with twice daily punch downs. Aged 17 months in 22% new French oak.</string>
+
+
+    <string name="sauvignon">2014 Walla Walla Cabernet Sauvignon was cold soaked, punched down and pumped over throughout fermentation. Delestage, a process to oxygenate or aerate the wine and soften the tannins, was performed midway through fermentation.</string>
+
+
+    <string name="brutcuvee">The 2016 Brut Cuvée was four years in the making. Brut Cuvée literally means a dry blend that uses the first pressed and most desirable grape juice. Our Brut Cuvée is a blend of Pinot Noir (83%) and Chardonnay (17%) made in the traditional "méthode champenoise."</string>
+
+
+    <string name="pinotgris">The 2018 vintage was fermented in 100% stainless steel tanks, which were temperature controlled to maximize fruit character. This wine benefited from sur lie aging for 4 months prior to bottling.</string>
+    <string name="riesling">This 2012 Riesling was handpicked, and whole cluster pressed before being cold-settled, racked, and slowly fermented. This wine benefited from sur lie aging for 4 months prior to bottling.</string>
+    <string name="blancdenoir">This wine was made using the méthode champenoise (“champagne method”), the traditional method from the Champagne region in France distinguished by subjecting the wine to a second fermentation en tirage, or in the bottle.</string>
+    <string name="cuveeblanc">The fruit was whole cluster pressed and cool fermented in stainless steel with some varieties co-fermenting. One lot was Biodynamically allowed to ferment with native yeast. Sur lie aged for six months in stainless steel tanks.</string>
+
 </resources>
