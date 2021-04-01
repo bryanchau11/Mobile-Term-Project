@@ -33,7 +33,6 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
     @Override
     public void onBindViewHolder( ViewHolder holder, int position) {
 
-        // here we will find the position and start setting the output on our views
 
         String nameofDrink = modelList.get(position).getmDrinkName();
         String descriptionofdrink = modelList.get(position).getmDrinkDetail();
@@ -50,11 +49,9 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
         return modelList.size();
     }
 
-    // in OrderAdapter to make our views responsive we can implement onclicklistener on our recyclerview
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-        // here we will find the views on which we will inflate our data
 
         TextView mDrinkName, mDrinkDescription;
         ImageView imageView;
@@ -73,7 +70,6 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
         @Override
         public void onClick(View v) {
 
-            // lets get the position of the view in list and then work on it
 
             int position = getAdapterPosition();
 

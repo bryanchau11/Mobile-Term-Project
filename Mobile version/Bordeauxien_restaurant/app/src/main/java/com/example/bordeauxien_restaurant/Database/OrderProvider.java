@@ -12,7 +12,6 @@ import java.net.URI;
 
 public class OrderProvider extends ContentProvider {
 
-    // this constant is needed in order to define the path of our modification in the table
     public static final int ORDER = 100;
 
     public static UriMatcher sUriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
@@ -57,8 +56,7 @@ public class OrderProvider extends ContentProvider {
         return null;
     }
 
-    // we will work on this method  because in this app we are just inserting the data not updating it for now
-    @Override
+   @Override
     public Uri insert(Uri uri,  ContentValues values) {
 
         int match = sUriMatcher.match(uri);
@@ -90,7 +88,6 @@ public class OrderProvider extends ContentProvider {
             throw new IllegalArgumentException("price is Required");
         }
 
-        // SINCE WE ARE INSERTING DATA IN DATABASE SO NOW WE ARE WRITING ON DATABASE
 
         SQLiteDatabase database = mHelper.getWritableDatabase();
         long id = database.insert(OrderContract.OrderEntry.TABLE_NAME, null, values);
@@ -105,7 +102,6 @@ public class OrderProvider extends ContentProvider {
     @Override
     public int delete( Uri uri,  String selection,  String[] selectionArgs) {
 
-        // we will use this to clear the data once order is made
 
 
         int rowsDeleted;

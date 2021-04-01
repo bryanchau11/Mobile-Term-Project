@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
+    android:background="@color/black"
     android:layout_height="wrap_content"
     tools:context=".MainActivity">
 
@@ -30,28 +31,31 @@
                 android:layout_height="88dp"
                 android:id="@+id/coffeeImage"
                 android:layout_marginTop="4dp"
-                android:src="@drawable/greentea"/>
+                android:src="@drawable/pinotnoir"/>
 
             <TextView
+                android:id="@+id/description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text=""
-                android:textSize="12sp"
-                android:layout_marginRight="12dp"
                 android:layout_below="@+id/coffeeName"
                 android:layout_marginLeft="12dp"
-                android:id="@+id/description"
-                android:layout_toRightOf="@+id/coffeeImage"/>
+                android:layout_marginRight="12dp"
+                android:layout_toRightOf="@+id/coffeeImage"
+                android:textColor="#5102DD"
+                android:textSize="12sp"
+                tools:text="" />
+
             <TextView
+                android:id="@+id/coffeeName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="12dp"
                 android:layout_marginTop="5dp"
-                android:id="@+id/coffeeName"
-                android:textStyle="italic"
-                android:textSize="26sp"
                 android:layout_toRightOf="@+id/coffeeImage"
-                tools:text="Green Tea"/>
+                android:textColor="#FF0000"
+                android:textSize="26sp"
+                android:textStyle="italic"
+                tools:text="Green Tea" />
 
             <TextView
                 android:layout_width="wrap_content"
