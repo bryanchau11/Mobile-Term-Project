@@ -10,23 +10,34 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.ViewFlipper;
 
 import androidx.appcompat.widget.Toolbar;
 
 import com.google.firebase.auth.FirebaseAuth;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class MainActivity extends AppCompatActivity {
     private Button button_about, button_website, button_call, button_inquire, button_contact;
+    ViewFlipper v_flipper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        int image[] = {R.drawable.window1, R.drawable.window2,R.drawable.window3,R.drawable.window4,R.drawable.window5,R.drawable.window6,R.drawable.window7};
+        v_flipper = findViewById(R.id.v_flipper);
 
+        for (int i=0; i<image.length; i++) {
+            flipperImages(image[i]);
 
+        }
         button_about = (Button) findViewById(R.id.about_button);
         button_about.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,7 +76,15 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
+    public void flipperImages(int image) {
+        ImageView imageView = new ImageView(this);
+        imageView.setBackgroundResource(image);
+        v_flipper.addView(imageView);
+        v_flipper.setFlipInterval(2000);
+        v_flipper.setAutoStart(true);
+        v_flipper.setInAnimation(this, android.R.anim.slide_in_left);
+        v_flipper.setOutAnimation(this, android.R.anim.slide_out_right);
+    }
 
     public void openActivity_about(){
         Intent intent = new Intent(this,  about.class );
