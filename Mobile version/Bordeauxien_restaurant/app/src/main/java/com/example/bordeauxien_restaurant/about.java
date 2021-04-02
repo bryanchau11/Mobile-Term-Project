@@ -40,10 +40,13 @@ public class about extends AppCompatActivity {
         //Textfields to edit.
         textview = (TextView) findViewById(R.id.aboutText);
         //type text in between ""
-        String para = "Since planting our first vines in 1962, the Chau family name has become synonymous with the highest quality French varietal wines from the Bordeaux region. For the team at Chau Family Winery, every harvest is the realization of the French dream\n"
-                +  "of Vietnamese immigrants who came to this country at the turn of the 19th century to build a family and a future.\n"
-                +  "\nToday, we believe in the importance of family more than ever – the one you’re born into and the one you choose. There is always a seat at our table and all are welcome to share in our daily celebration of family, Chau, and the bounty\n"
-                +  "of our home in Bordeaux.";
+        String para = "Since planting our first vines in 1962, the Plantier family name has become synonymous with the highest quality French varietal wines from the Bordeaux region. For the team at Plantier Family Winery, every harvest is the realization of the French dream\n"
+                +  "Today, we believe in the importance of family more than ever – the one you’re born into and the one you choose. There is always a seat at our table and all are welcome to share in our daily celebration of family, Plantier, and the bounty "
+                +  "of our home in Bordeaux.\n"
+                + "We aim to support our local area. We also provide services that could help those who are always in rush due to their busy work from our city. "
+                + "Bordeauxien also do our best to source locally made foods and accessories to sell at our tasting rooms as well!\n"
+                + "\n"
+                + "See you soon!";
         textview.setText(para);
         textview.setMovementMethod(new ScrollingMovementMethod());
 

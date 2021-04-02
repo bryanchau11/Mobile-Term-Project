@@ -8,5 +8,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#03A9F4</color>
     <color name="title">#FFFFFF</color>
+    <color name="granite_grey">#666666</color>
     <color name="menu_option_color">#00A2E8</color>
 </resources>

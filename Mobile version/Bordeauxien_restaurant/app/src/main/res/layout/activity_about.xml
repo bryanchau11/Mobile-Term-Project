@@ -65,6 +65,7 @@
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
+        style="@style/Widget.AppCompat.AutoCompleteTextView"
         android:layout_width="101dp"
         android:layout_height="41dp"
         android:layout_marginStart="109dp"
@@ -72,7 +73,10 @@
         android:layout_marginTop="204dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:selectAllOnFocus="false"
+        android:singleLine="false"
         android:text="Bryan Chau"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="14sp"
         android:textStyle="italic"
         app:layout_constraintStart_toStartOf="parent"
