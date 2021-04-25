@@ -3,7 +3,9 @@ package com.example.bordeauxien_restaurant;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.MenuCompat;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -17,17 +19,19 @@ import android.widget.ViewFlipper;
 import androidx.appcompat.widget.Toolbar;
 
 import com.google.firebase.auth.FirebaseAuth;
-
+import io.flutter.embedding.android.FlutterActivity;
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity {
+    public static MainActivity instance = null;
     private Button button_about, button_website, button_call, button_inquire, button_contact;
     ViewFlipper v_flipper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        instance = this;
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -42,7 +46,10 @@ public class MainActivity extends AppCompatActivity {
         button_about.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openActivity_about();
+                startActivity(
+                        FlutterActivity.withNewEngine().initialRoute("/about").build(v.getContext())
+                );
+//                openActivity_about();
             }
         });
         button_website = (Button) findViewById(R.id.website_button);
@@ -57,6 +64,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 openActivity_call();
+                Intent intent=new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:+16786703131"));
+                startActivity(intent);
             }
         });
         button_inquire = (Button) findViewById(R.id.inquire_button);
@@ -70,7 +80,11 @@ public class MainActivity extends AppCompatActivity {
         button_contact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openActivity_contact();
+                startActivity(
+                        FlutterActivity.withNewEngine().initialRoute("/contact").build(v.getContext())
+                );
+//                openActivity_contact();
+
             }
         });
 
@@ -140,7 +154,4 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
-
-
 }
