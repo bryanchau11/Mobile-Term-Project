@@ -7,13 +7,9 @@ public class OrderContract {
 
     public OrderContract() {
     }
-
     public static final String CONTENT_AUTHORITY = "com.example.bordeauxien_restaurant";
     public static final Uri BASE_URI = Uri.parse("content://" + CONTENT_AUTHORITY);
-
     public static final String PATH = "orderig";
-
-
     public static abstract class OrderEntry implements BaseColumns{
 
         public static final Uri CONTENT_URI = Uri.withAppendedPath(BASE_URI, PATH);

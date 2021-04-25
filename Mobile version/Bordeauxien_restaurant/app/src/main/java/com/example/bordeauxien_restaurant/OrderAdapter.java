@@ -63,8 +63,6 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
             mDrinkDescription = itemView.findViewById(R.id.description);
             imageView = itemView.findViewById(R.id.coffeeImage);
             itemView.setOnClickListener(this);
-
-
         }
 
         @Override

@@ -66,8 +66,8 @@ public class BlancDeNoir extends AppCompatActivity implements LoaderManager.Load
                 int basePrice = 95;
                 quantity++;
                 displayQuantity();
-                int coffePrice = basePrice * quantity;
-                String setnewPrice = String.valueOf(coffePrice);
+                int wine_price = basePrice * quantity;
+                String setnewPrice = String.valueOf(wine_price);
                 winePrice.setText(setnewPrice);
 
 
@@ -90,8 +90,8 @@ public class BlancDeNoir extends AppCompatActivity implements LoaderManager.Load
                 } else {
                     quantity--;
                     displayQuantity();
-                    int coffePrice = basePrice * quantity;
-                    String setnewPrice = String.valueOf(coffePrice);
+                    int wine_price = basePrice * quantity;
+                    String setnewPrice = String.valueOf(wine_price);
                     winePrice.setText(setnewPrice);
 
 
@@ -108,41 +108,31 @@ public class BlancDeNoir extends AppCompatActivity implements LoaderManager.Load
     }
 
     private boolean SaveCart() {
-
-
         String name = drinnkName.getText().toString();
         String price = winePrice.getText().toString();
         String quantity = quantitynumber.getText().toString();
-
         ContentValues values = new ContentValues();
         values.put(OrderContract.OrderEntry.COLUMN_NAME, name);
         values.put(OrderContract.OrderEntry.COLUMN_PRICE, price);
         values.put(OrderContract.OrderEntry.COLUMN_QUANTITY, quantity);
-
         if (giftWrap.isChecked()) {
             values.put(OrderContract.OrderEntry.COLUMN_GIFT, "Gift Wrap: YES");
         } else {
             values.put(OrderContract.OrderEntry.COLUMN_GIFT, "Gift Wrap: NO");
-
         }
-
         if (expressDelivery.isChecked()) {
             values.put(OrderContract.OrderEntry.COLUMN_EXPRESS, "Express Delivery: YES");
         } else {
             values.put(OrderContract.OrderEntry.COLUMN_EXPRESS, "Express Delivery: NO");
-
         }
-
         if (mCurrentCartUri == null) {
             Uri newUri = getContentResolver().insert(OrderContract.OrderEntry.CONTENT_URI, values);
             if (newUri==null) {
                 Toast.makeText(this, "Failed to add to Cart", Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(this, "Success  adding to Cart", Toast.LENGTH_SHORT).show();
-
             }
         }
-
         hasAllRequiredValues = true;
         return hasAllRequiredValues;
 

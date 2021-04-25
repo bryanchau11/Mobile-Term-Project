@@ -52,25 +52,25 @@ public class about extends AppCompatActivity {
 
         textB = (TextView) findViewById(R.id.textBryan);
         //type text in between ""
-        String paraB = "about Bryan";
+        String paraB = "about Bryan \n  I'm a team leader and my task for this project was doing most of the stuff (80% of the project)";
         textB.setText(paraB);
         textB.setMovementMethod(new ScrollingMovementMethod());
 
         textS = (TextView) findViewById(R.id.textSunwoo);
         //type text in between ""
-        String paraS = "about Sunwoo";
+        String paraS = "about Sunwoo \n  I did about page, contact page, user stories and many things.";
         textS.setText(paraS);
         textS.setMovementMethod(new ScrollingMovementMethod());
 
         textP = (TextView) findViewById(R.id.textPriya);
         //type text in between ""
-        String paraP = "about Priya";
+        String paraP = "about Priya \n  Flutter and Call page and application flow chart";
         textP.setText(paraP);
         textP.setMovementMethod(new ScrollingMovementMethod());
 
         textM = (TextView) findViewById(R.id.textMaanasa);
         //type text in between ""
-        String paraM = "about Maanasa";
+        String paraM = "about Maanasa \n  No clue";
         textM.setText(paraM);
         textM.setMovementMethod(new ScrollingMovementMethod());
 

@@ -66,8 +66,8 @@ public class CuveeBlanc extends AppCompatActivity implements LoaderManager.Loade
                 int basePrice = 58;
                 quantity++;
                 displayQuantity();
-                int coffePrice = basePrice * quantity;
-                String setnewPrice = String.valueOf(coffePrice);
+                int wine_price = basePrice * quantity;
+                String setnewPrice = String.valueOf(wine_price);
                 winePrice.setText(setnewPrice);
 
 
@@ -90,8 +90,8 @@ public class CuveeBlanc extends AppCompatActivity implements LoaderManager.Loade
                 } else {
                     quantity--;
                     displayQuantity();
-                    int coffePrice = basePrice * quantity;
-                    String setnewPrice = String.valueOf(coffePrice);
+                    int wine_price = basePrice * quantity;
+                    String setnewPrice = String.valueOf(wine_price);
                     winePrice.setText(setnewPrice);
 
 
@@ -205,8 +205,7 @@ public class CuveeBlanc extends AppCompatActivity implements LoaderManager.Loade
             String nameofdrink = cursor.getString(name);
             String priceofdrink = cursor.getString(price);
             String quantityofdrink = cursor.getString(quantity);
-            String yeshasGiftWrap = cursor.getString(hasGiftWrap);
-            String yeshastopping = cursor.getString(hasExpressDelivery);
+            
 
             drinnkName.setText(nameofdrink);
             winePrice.setText(priceofdrink);

@@ -13,9 +13,6 @@ public class Model {
         this.mDrinkPhoto = mDrinkPhoto;
     }
 
-
-
-
     public String getmDrinkName() {
         return mDrinkName;
     }

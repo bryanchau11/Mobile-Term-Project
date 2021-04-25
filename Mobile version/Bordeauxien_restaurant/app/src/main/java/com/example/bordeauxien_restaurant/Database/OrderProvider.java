@@ -102,8 +102,6 @@ public class OrderProvider extends ContentProvider {
     @Override
     public int delete( Uri uri,  String selection,  String[] selectionArgs) {
 
-
-
         int rowsDeleted;
         SQLiteDatabase database = mHelper.getWritableDatabase();
         int match = sUriMatcher.match(uri);

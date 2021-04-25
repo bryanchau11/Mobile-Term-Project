@@ -232,7 +232,8 @@
         android:id="@+id/textBryan"
         android:layout_width="195dp"
         android:layout_height="102dp"
-        android:text="TextView"
+        android:text="I'm a team leader and my task for this project was doing most of the stuff (80% of the project)"
+        android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
@@ -243,7 +244,8 @@
         android:layout_marginStart="5dp"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="3dp"
-        android:text="TextView"
+        android:text="Flutter and call page"
+        android:visibility="visible"
         app:layout_constraintStart_toEndOf="@+id/textBryan"
         app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
@@ -251,7 +253,8 @@
         android:id="@+id/textSunwoo"
         android:layout_width="195dp"
         android:layout_height="102dp"
-        android:text="TextView"
+        android:text="I did about page, contact page, user stories and many things."
+        android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
@@ -260,7 +263,8 @@
         android:layout_width="195dp"
         android:layout_height="102dp"
         android:layout_marginTop="2dp"
-        android:text="TextView"
+        android:text="No clue"
+        android:visibility="visible"
         app:layout_constraintStart_toEndOf="@+id/textSunwoo"
         app:layout_constraintTop_toBottomOf="@+id/imageView7" />
 
