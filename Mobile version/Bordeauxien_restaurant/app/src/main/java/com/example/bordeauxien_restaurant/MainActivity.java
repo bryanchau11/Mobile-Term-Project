@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.MenuCompat;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -55,8 +56,9 @@ public class MainActivity extends AppCompatActivity {
         button_call = (Button) findViewById(R.id.call_button);
         button_call.setOnClickListener(new View.OnClickListener() {
             @Override
+            //
             public void onClick(View v) {
-                openActivity_call();
+                activity_call();
             }
         });
         button_inquire = (Button) findViewById(R.id.inquire_button);
@@ -94,8 +96,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this,  Login.class );
         startActivity(intent);
     }
-    public void openActivity_call(){
-        Intent intent = new Intent(this,  call.class );
+    public void activity_call(){
+        Intent intent = new Intent(Intent.ACTION_DIAL);
+        intent.setData(Uri.parse("tel:6781234567"));
         startActivity(intent);
     }
     public void openActivity_inquire(){
